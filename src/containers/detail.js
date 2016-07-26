@@ -9,15 +9,14 @@ import { BASE_URL } from '../actions';
 class Detail extends React.Component {
 
   componentWillMount(){
-      const props = this.props;
-      const url = BASE_URL + props.params.id;
-      console.log('d',this.props);
+      const url = BASE_URL + this.props.params.id;
       this.props.requestDetail(url);
   }
 
   render(){
     var detail = this.props.state;
     var genres = detail.genres
+    console.log(detail.genres);
     console.log(detail.directors);
 
     return (
@@ -51,7 +50,7 @@ class Detail extends React.Component {
               <p>豆瓣成员常用的标签</p>
               <ul>
                   <li>
-                      <a href="/tag/意大利/movie?from_id=26614893">意大利</a>
+                      <a>意大利</a>
                   </li>
               </ul>
           </section>
@@ -63,7 +62,6 @@ class Detail extends React.Component {
                       <li className="pic">
                           <a><span><img src="" alt={detail.title+"的预告片"} /></span></a>
                       </li>
-
                   </ul>
               </div>
           </section>
