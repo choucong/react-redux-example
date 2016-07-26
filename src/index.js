@@ -26,5 +26,5 @@ ReactDOM.render(
       </Route>
     </Router>
   </Provider>,
-  document.getElementById('container')
+  document.getElementById('root')
 );

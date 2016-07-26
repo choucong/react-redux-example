@@ -1,11 +1,10 @@
-import { REQUEST_INTHEATERS } from '../actions';
+import { REQUEST_DETAIL } from '../actions';
 
-export default function intheaters(state = {count:0,total:0,start:0,data:[]}, action) {
+export default function intheaters(state = {}, action) {
+  // console.log("action_______",action.detail);
   switch (action.type) {
-    case REQUEST_INTHEATERS:
-        return {
-            ...state,datail:action.detail
-        };
+    case REQUEST_DETAIL:
+        return Object.assign({},action.detail);
     default:
       return state;
   }

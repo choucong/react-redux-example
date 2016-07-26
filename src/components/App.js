@@ -9,9 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <Header data={data.DATA} />
-        <div id="app">
-          {this.props.children}
-        </div>
+        {this.props.children}
       </div>
     );
   }

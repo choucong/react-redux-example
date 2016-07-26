@@ -21,9 +21,11 @@ class Usbox extends React.Component {
           return <Item item={item.subject} key={i} />
         })
       return (
+        <div id="app">
         <section id="list" className="grid">
           {items}
         </section>
+      </div>
       )
   }
 }

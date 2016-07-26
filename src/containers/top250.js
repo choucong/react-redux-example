@@ -22,9 +22,11 @@ class Top250 extends React.Component {
           return <Item item={item} key={i} />
         })
       return (
+        <div id="app">
         <section id="list" className="grid">
           {items}
         </section>
+      </div>
       )
   }
 }

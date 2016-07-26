@@ -23,9 +23,11 @@ class Comingsoon extends React.Component {
         })
 
       return (
+        <div id="app">
         <section id="list" className="grid">
           {items}
         </section>
+      </div>
       )
   }
 }

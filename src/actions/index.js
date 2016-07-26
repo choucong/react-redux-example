@@ -72,6 +72,7 @@ export function requestComingsoon(url) {
 export function requestDetail(url){
       return function(dispatch) {
         jsonp(url, null, function (err, data) {
+          console.log('data',data);
           if (err) {
             console.error(err.message);
           } else {

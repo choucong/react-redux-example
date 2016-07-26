@@ -6,7 +6,6 @@ export default class Item extends React.Component {
 
   render(){
     const item = this.props.item;
-    console.log('8888:',item);
     const w = {width:'100%'};
     return (
         <Link className="item" to={"/item/" + item.id}>
