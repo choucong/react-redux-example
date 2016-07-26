@@ -1,0 +1,25 @@
+.TalionNav{position:relative}
+.TalionNav.is-active{position:absolute;top:0;right:0;bottom:0;left:0}
+.TalionNav li,.TalionNav ul{margin:0;padding:0;list-style:none}
+.TalionNav a{text-decoration:none}
+.TalionNav-primary{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-bottom:1px solid #f3f3f3;padding:0 18px;background:#fff;height:47px;box-sizing:border-box}
+.TalionNav-primary>*{white-space:nowrap;overflow: scroll;}
+.TalionNav-primary h1{margin:0;padding:0;color:#00b600;font-size:0;background-size:cover;height:22px;width:46px}
+.TalionNav-primary nav>*,.TalionNav-primary nav li{display:inline-block}
+.TalionNav-primary nav>*{vertical-align:middle}
+.TalionNav-primary nav li{font-size:15px;margin-right:19px}
+.TalionNav-primary nav a{color:#494949;display: block;height: 47px;line-height: 47px;}
+.TalionNav-primary nav span{font-size:0;;background-size:cover;width:24.57143px;height:18.28571px;margin-top:4px}
+.TalionNav-secondary{position:absolute;left:0;right:0;top:47px;z-index:9999;background:#fff}
+.TalionNav-secondary form{padding:21px 18px}
+.TalionNav-secondary input[type=search]{box-sizing:border-box;-webkit-appearance:none;border:0;;background-size:17.33333px;border-radius:3px;width:100%;height:31px;font-size:14px}
+.TalionNav-secondary input[type=search]:focus{background-image:none}
+.TalionNav-secondary ul{overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}.TalionNav-secondary li a{display:block;text-align:left;margin-bottom:25px}
+.TalionNav-secondary li strong{display:block;font-weight:400;font-size:19px;line-height:28px}
+.TalionNav-secondary li span{display:block;color:#999;height:17px;font-size:10px;letter-spacing:1px}
+.TalionNav-secondary .toPC{text-align:center;padding-top:13px;padding-bottom:13px;width:80%;display:block;text-decoration:none;font-size:15px;color:#aaa;border-top:1px solid #f3f3f3;margin:0 auto}
+.TalionNav-layer{background:rgba(0,0,0,.5);position:absolute;top:47px;left:0;height:100%;width:100%}
+.page {position: relative;}
+#TalionNav {margin-bottom: 47px;}
+.TalionNav {position: fixed;left: 0;right: 0;top: 0;z-index: 9999;}
+.TalionNav.is-active {position: fixed;}
