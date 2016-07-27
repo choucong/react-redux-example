@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-example",
+  "name": "sign-Of-cars",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,8 @@
     "build": "node node_modules/webpack/bin/webpack.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["react","redux","react-router"],
-  "author": "lanqy",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.10.4",
@@ -47,13 +47,14 @@
     "isomorphic-fetch": "^2.2.1",
     "json-loader": "^0.5.4",
     "jsonp": "^0.2.0",
-    "lodash": "^4.13.1",
+    "lodash": "^4.14.0",
     "material-ui": "^0.15.2",
     "node-sass": "^3.8.0",
     "normalize.css": "^4.2.0",
     "postcss-loader": "^0.9.1",
     "purecss": "^0.6.0",
     "react": "^15.2.1",
+    "react-addons-css-transition-group": "^15.2.1",
     "react-bootstrap": "^0.29.5",
     "react-color": "^2.2.0",
     "react-css-modules": "^3.7.7",
