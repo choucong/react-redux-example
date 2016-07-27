@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import Top250Reducer from './top250';
 import UsboxReducer from './usbox';
 import IntheatersReducer from './intheaters';
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   intheaters: IntheatersReducer,
   comingsoon: ComingsoonReducer,
   detail: DetailReducer,
+  routing:routerReducer,
   form: FormReducer
 });
 

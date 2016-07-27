@@ -1,7 +1,6 @@
 import React from 'react';
 import Stars from './stars';
 import { Link } from 'react-router';
-
 export default class Item extends React.Component {
 
   render(){

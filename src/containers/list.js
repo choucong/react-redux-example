@@ -6,7 +6,6 @@ import * as Actions from '../actions';
 class List extends React.Component {
 
   render(){
-   console.log("props log",this.props);
     const items = this.props.state.map((item,i) => {
       return <Item item={item} key={i} onClick={() => this.showDetail(i)} />
     });

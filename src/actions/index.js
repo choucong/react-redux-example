@@ -64,6 +64,7 @@ export function requestComingsoon(url) {
                   type: REQUEST_COMINGSOON,
                   comingsoon: data
               })
+
           }
         });
       }

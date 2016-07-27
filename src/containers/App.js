@@ -3,16 +3,12 @@ import Header from '../containers/Header';
 import Root from './root';
 import * as data from '../store/data';
 class App extends React.Component {
-
-  componentWillMount(){
-    console.log("props:",this.props);
-  }
-
   render() {
+    console.log('App:',this.props);
     return (
       <div>
         <Header data={data.DATA} />
-        {this.props.children}
+        <Root props={this.props} />
       </div>
     );
   }
