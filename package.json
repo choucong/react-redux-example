@@ -63,6 +63,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.6.0",
     "react-router-redux": "^4.0.5",
+    "react-spinner": "^0.2.6",
     "react-tap-event-plugin": "^1.0.0",
     "recompose": "^0.20.2",
     "redux": "^3.5.2",
