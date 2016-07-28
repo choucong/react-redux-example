@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import Stars from './stars';
 import * as data from '../store/data';
 import { BASE_URL } from '../actions';
+import Loader from '../components/loader';
+import _ from 'lodash';
 
 class Detail extends React.Component {
 
@@ -14,10 +16,23 @@ class Detail extends React.Component {
   }
 
   render(){
+
     var detail = this.props.state;
-    var genres = detail.genres
-    console.log(genres);
-    console.log(detail.directors);
+    if(_.isEmpty(detail)){
+      return <Loader />;
+    }
+    console.log('detail',detail);
+    var a = Object.assign({},detail);
+    var genres = a.genres;
+    var directorsArr = [],castsArr = [];
+    var directors = a.directors.map((item)=>{
+      directorsArr.push(item.name);
+    });
+
+    a.casts.map((item) => {
+      castsArr.push(item.name)
+    });
+
     return (
         <div className="page">
             <div className="card">
@@ -25,17 +40,17 @@ class Detail extends React.Component {
                 <section className="subject-info">
                     <div className="right">
                         <a href="" rel="nofollow">
-                            <img src='' alt={detail.title} className="cover" />
+                            <img src={detail.images.small} alt={detail.title} className="cover" />
                         </a>
                     </div>
                     <div className="left">
                         <p className="rating">
                             <Stars />
-                            <strong>8.7</strong>
+                            <strong>{a.rating.average}</strong>
                             <span>{detail.ratings_count}人评分</span>
                         </p>
                         <p className="meta">
-                            97分钟 {detail.genres} (导演) / 吉塞培·巴蒂斯通 / 安娜·福列塔 / 马可·贾利尼 / {detail.year}({detail.countries}) 上映
+                             {genres.join(' / ')} {directorsArr.join(' / ')}(导演) {castsArr.join(' / ')} {detail.year}({detail.countries}) 上映
                         </p>
                     </div>
                 </section>
@@ -43,24 +58,6 @@ class Detail extends React.Component {
                     <h2>{detail.title}的剧情简介</h2>
                     <div className="bd">
                         <p data-clamp="3" data-content={detail.summary}>{detail.summary}</p>
-                    </div>
-                </section>
-                <section className="tags">
-                    <p>豆瓣成员常用的标签</p>
-                    <ul>
-                        <li>
-                            <a>意大利</a>
-                        </li>
-                    </ul>
-                </section>
-                <section className="subject-pics">
-                    <h2>{detail.title}的预告片(1)和图片(141)</h2>
-                    <div className="bd photo-list">
-                        <ul className="wx-preview">
-                            <li className="pic">
-                                <a><span><img src="" alt={detail.title+"的预告片"} /></span></a>
-                            </li>
-                        </ul>
                     </div>
                 </section>
             </div>

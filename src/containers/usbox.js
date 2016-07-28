@@ -6,6 +6,7 @@ import * as Utils from '../utils/utils';
 import * as data from '../store/data';
 import { connect } from 'react-redux';
 import List from './list';
+import Loader from '../components/loader';
 class Usbox extends React.Component {
 
   componentWillMount(){
@@ -17,6 +18,11 @@ class Usbox extends React.Component {
 
   render(){
     var state = this.props.state.data;
+
+    if(!state.length){
+      return <Loader />
+    }
+
     var items = state.map((item,i) => {
           return <Item item={item.subject} key={i} />
         })

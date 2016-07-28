@@ -5,6 +5,7 @@ import * as Utils from '../utils/utils';
 import * as Actions from '../actions';
 import { connect } from 'react-redux';
 import * as data from '../store/data';
+import Loader from '../components/loader';
 
 class Intheaters extends React.Component {
 
@@ -17,6 +18,11 @@ class Intheaters extends React.Component {
 
   render(){
     var state = this.props.state.data;
+
+    if(!state.length){
+      return <Loader />
+    }
+
     const items = state.map((item,i) =>{
       return <Item item={item} key={i} />
     })

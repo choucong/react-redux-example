@@ -6,6 +6,7 @@ import * as Utils from '../utils/utils';
 import * as data from '../store/data';
 import { connect } from 'react-redux';
 import List from './list';
+import Loader from '../components/loader';
 
 class Top250 extends React.Component {
 
@@ -18,6 +19,12 @@ class Top250 extends React.Component {
 
   render(){
     var state = this.props.state.data;
+
+
+    if(!state.length){
+      return <Loader />
+    }
+
     var items = state.map((item,i) => {
           return <Item item={item} key={i} />
         })
