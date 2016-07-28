@@ -8,6 +8,7 @@ const PATHS = {
 };
 
 module.exports = {
+  devtool:'source-map',
   entry: {
     javascript: PATHS.app,
     html: PATHS.html
@@ -28,7 +29,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         loader: 'babel'
       },
