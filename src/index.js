@@ -9,12 +9,13 @@ import Intheaters from './containers/intheaters';
 import Comingsoon from './containers/comingsoon';
 import Detail from './containers/detail';
 import { Provider } from 'react-redux';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import configureStore from './store/configureStore';
 
 const store = configureStore();
 
 // Create an enhanced history that syncs navigation events with the store
+
 const history = syncHistoryWithStore(browserHistory, store)
 
 console.log("history",history);
@@ -28,9 +29,7 @@ ReactDOM.render(
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
-        <Route path="comingsoon" component={Comingsoon}>
-          <Route path="comingsoon/:id" component={Detail} />
-        </Route>
+        <Route path="comingsoon" component={Comingsoon} />
         <Route path="usbox" component={Usbox} />
         <Route path="intheaters" component={Intheaters} />
         <Route path="top250" component={Top250} />
